@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Explorer.FileSystemView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:loc="clr-namespace:Explorer">
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="dataProvider"
+                            ObjectType="loc:FileSystemObjectViewModel" 
+                            MethodName="GetSystemDrives"/>
+        
+        <loc:IconConverter x:Key="iconConverter" />
+        
+    </UserControl.Resources>
+    <TreeView VirtualizingStackPanel.IsVirtualizing="True"
+              VirtualizingStackPanel.VirtualizationMode="Recycling"
+              DataContext="{Binding Source={StaticResource dataProvider}}"
+              ItemsSource="{Binding Children}">
+        
+        <TreeView.ItemTemplate>
+            <HierarchicalDataTemplate DataType="loc:FileSystemObjectViewModel"
+                                      ItemsSource="{Binding Children}">
+                
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Converter={StaticResource iconConverter}}" />
+                    <TextBlock Text="{Binding DisplayName}" />
+                </StackPanel>
+                
+            </HierarchicalDataTemplate>
+        </TreeView.ItemTemplate>
+        
+        <TreeView.ItemContainerStyle>
+            <Style TargetType="TreeViewItem">
+                <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+            </Style>
+        </TreeView.ItemContainerStyle>
+        
+    </TreeView>
+    
+</UserControl>
