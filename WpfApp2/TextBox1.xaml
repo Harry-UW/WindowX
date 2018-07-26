@@ -1,0 +1,14 @@
+﻿<dz:DockItem
+    x:Class="WpfApp2.Textbox1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
+    AllowedDockTreePositions="ToolWindow"
+    DefaultDockPosition="Document"
+    Title="TextBox1"
+    TabText="TextBox1"
+    Style="{DynamicResource {x:Type dz:DockItem}}"
+    HideOnPerformClose="True">
+    <TextBox />
+
+</dz:DockItem>

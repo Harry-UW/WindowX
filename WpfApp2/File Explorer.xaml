@@ -1,0 +1,16 @@
+﻿<dz:DockItem
+    x:Class="WpfApp2.FileExplorer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
+    xmlns:loc11="clr-namespace:Explorer;assembly=mgen_simpleExplorer"
+    AllowedDockTreePositions="ToolWindow"
+    DefaultDockPosition="Right"
+    Title="File Explorer"
+    TabText="File Explorer"
+    Style="{DynamicResource {x:Type dz:DockItem}}"
+
+    HideOnPerformClose="True">
+    <loc11:FileSystemView />
+
+</dz:DockItem>

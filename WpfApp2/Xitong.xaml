@@ -1,0 +1,14 @@
+﻿<dz:DockItem
+    x:Class="WpfApp2.Xitong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
+    AllowedDockTreePositions="ToolWindow"
+    DefaultDockPosition="Bottom"
+    Title="系统日志"
+    TabText="系统日志"
+    Style="{DynamicResource {x:Type dz:DockItem}}"
+    HideOnPerformClose="True">
+    <TextBox />
+
+</dz:DockItem>

@@ -1,0 +1,15 @@
+<DockLayout xmlns="http://schemas.devzest.com/presentation/docking" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" DockTreeZOrder="Right, Left, Top, Bottom">
+    <DockLayout.DockItems>
+        <DockItemReference>WpfApp2.Jishu</DockItemReference>
+        <DockItemReference>WpfApp2.Textbox1</DockItemReference>
+        <DockItemReference>WpfApp2.FileExplorer</DockItemReference>
+        <DockItemReference>WpfApp2.Xitong</DockItemReference>
+    </DockLayout.DockItems>
+    <DockLayout.ShowActions>
+        <ShowAsDockPositionAction DockPosition="Bottom" Source="1" ShowMethod="Hide" />
+        <ShowAsDockPositionAction DockPosition="Left" Source="0" />
+        <ShowAsDockPositionAction DockPosition="Right" Source="2" />
+        <ShowAsTabbedAction Target="1" Source="3" />
+        <ShowAsFloatingAction Left="390.4" Top="316.8" Width="336.8" Height="336.8" Source="1" />
+    </DockLayout.ShowActions>
+</DockLayout>

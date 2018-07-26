@@ -1,0 +1,21 @@
+﻿<dz:DockItem
+    x:Class="WpfApp2.Jishu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
+    AllowedDockTreePositions="ToolWindow"
+    DefaultDockPosition="Left"
+    Title="技术支持"
+    TabText="技术支持"
+    Style="{DynamicResource {x:Type dz:DockItem}}"
+    HideOnPerformClose="True">
+    <FlowDocumentScrollViewer>
+        <FlowDocumentScrollViewer.Document>
+            <FlowDocument FontFamily="Calibri" FontSize="14.5" TextAlignment="Left">
+                <Paragraph FontSize="22" FontWeight="Bold">技术支持</Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer.Document>
+    </FlowDocumentScrollViewer>
+
+</dz:DockItem>
+    

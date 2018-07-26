@@ -1,0 +1,92 @@
+﻿<Fluent:RibbonWindow
+    x:Class="WpfApp2.MainWindow"                   
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
+    xmlns:Local="clr-namespace:WpfApp2"
+    
+
+
+    Title="Ribbon Dock" Height="350" Width="525" Icon="Resources\111.ico" WindowState="Maximized" Closing="RibbonWindow_Closing" Activated="RibbonWindow_Activated">
+    <Fluent:RibbonWindow.WindowCommands>
+        <Fluent:WindowCommands/>
+    </Fluent:RibbonWindow.WindowCommands>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="66*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Fluent:Ribbon Grid.Row="0" AutomaticStateManagement="True"
+                       x:Name="ribbon" Margin="0,0,0.4,0" Grid.ColumnSpan="2">
+            <Fluent:Ribbon.QuickAccessItems>
+                <Fluent:QuickAccessMenuItem Target="{Binding ElementName=BtnSecManager}"/>
+                <Fluent:QuickAccessMenuItem Target="{Binding ElementName=BtnModifyPassword}"/>
+            </Fluent:Ribbon.QuickAccessItems>
+
+            <Fluent:RibbonTabItem Header="文本框" ReduceOrder="(P),(P),(P),(P),(P)">
+                <Fluent:RibbonGroupBox Header="User Group">
+                    <Fluent:Button Header="添加1" Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b9.png" LargeIcon="WpfApp2;component/Images/b9.png" Name="BtnQueryUser" Click="BtnQueryUser_Click" Size="Large" IsManipulationEnabled="False" />
+                    <Fluent:Button Header="添加2" Command="{Binding AddFunctionCommand}" Icon="WpfApp2\Images\b1.png" LargeIcon="WpfApp2;component/Images/b1.png" Name="BtnAddUser" Click="BtnAddUser_Click" />
+                    <Fluent:Button Header="添加3" Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b2.png" LargeIcon="WpfApp2;component/Images/b2.png" Name="BtnModifyUser" Click="BtnModifyUser_Click" />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+
+            <Fluent:RibbonTabItem Header="页面布局" ReduceOrder="(P),(P),(P),(P),(P)">
+                <Fluent:RibbonGroupBox Header="Role Group">
+                    <Fluent:Button Header="保存布局" Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b4.png" LargeIcon="WpfApp2;component/Images/b4.png"  Name="SAVE" Click="SAVE_Click"  />
+                    <Fluent:Button Header="读取布局" Command="{Binding AddFunctionCommand}" Icon="WpfApp2\Images\b11.png" LargeIcon="WpfApp2;component/Images/b11.png" Name="READ" Click="READ_Click" />
+                    <Fluent:Button Header="默认布局" Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b12.png" LargeIcon="WpfApp2;component/Images/b12.png" Name="DEFAULT" Click="DEFAULT_Click"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+
+            <Fluent:RibbonTabItem Header="帮助" ReduceOrder="(P),(P),(P),(P),(P)">
+                <Fluent:RibbonGroupBox Header="Department Group">
+                    <Fluent:Button Header="技术支持" Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b1.png" LargeIcon="WpfApp2;component/Images/b1.png" Name="BtnQueryDept" Click="BtnQueryDept_Click"/>
+                    <Fluent:Button Header="检查更新" Command="{Binding AddFunctionCommand}" Icon="WpfApp2\Images\b2.png" LargeIcon="WpfApp2;component/Images/b2.png" Name="BtnAddDept" Click="BtnAddDept_Click"/>
+                    <Fluent:Button Header="关于.." Command="{Binding OpenCommand}" Icon="WpfApp2\Images\b9.png" LargeIcon="WpfApp2;component/Images/b9.png" Name="BtnModifyDept" Click="BtnModifyDept_Click" />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+
+            <Fluent:RibbonTabItem Header="系统管理" ReduceOrder="(P),(P),(P),(P),(P)">
+                <Fluent:RibbonGroupBox Header="Security Group">
+                    <Fluent:Button Header="系统日志" Command="{Binding AddFunctionCommand}" Icon="Images\systemlog.ico" LargeIcon="WpfApp2;component/Resources/111.ico" Name="BtnSecManager" Click="BtnSecManager_Click"/>
+                    <Fluent:Button Header="文件浏览器" Command="{Binding OpenCommand}" Icon="Images\changePassword.ico" LargeIcon="WpfApp2;component/Resources/111.ico" Name="BtnModifyPassword" Click="BtnModifyPassword_Click"/>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="System Group">
+                    <Fluent:Button Header="退出系统" Width="80" Command="{Binding AddFunctionCommand}" Icon="WpfApp2\Images\close.png" LargeIcon="WpfApp2;component/Resources/111.ico" />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+        <Fluent:StatusBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0.4,-0.2">
+            <Fluent:StatusBarItem Title="Words Width"
+                                  Value="150"
+                                  HorizontalAlignment="Left">
+                <TextBlock Text="Message" />
+            </Fluent:StatusBarItem>
+        </Fluent:StatusBar>
+
+        <dz:DockControl 
+            Margin="0,18.6,0.4,18.6" 
+            Grid.Row="1"  
+            x:Name="c1"           
+            DockTreeZOrder="Right, Left, Top, Bottom" Grid.ColumnSpan="2" Loaded="c1_Loaded">
+            <dz:DockControl.DockItems>
+                <Local:Jishu x:Name ="Jishu" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Left}" />
+                <Local:Textbox1 x:Name ="Textbox1" ShowAction="{dz:ShowAsFloatingAction}" />
+                <Local:FileExplorer x:Name ="FileExplorer" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Right}" />
+                <Local:Xitong x:Name ="Xitong" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Bottom}" />
+            </dz:DockControl.DockItems>
+        </dz:DockControl>
+
+    </Grid>
+
+</Fluent:RibbonWindow>
+    
