@@ -54,6 +54,10 @@
     <Reference Include="Fluent, Version=6.1.0.233, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fluent.Ribbon.6.1.0.233\lib\net45\Fluent.dll</HintPath>
     </Reference>
+    <Reference Include="mgen_simpleExplorer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Explorer_GDB\mgen_simpleExplorer\bin\Debug\mgen_simpleExplorer.exe</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -181,12 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\111.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Explorer_GDB\mgen_simpleExplorer\Explorer.csproj">
-      <Project>{82c2ca3c-5671-417a-98b7-548926ea4092}</Project>
-      <Name>Explorer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

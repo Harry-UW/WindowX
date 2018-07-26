@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\WpfDocking-master\WpfDocking-master\Samples\Docking\CSharp\DockSample\XamlWriter.NamespaceMap.cs = ..\..\WpfDocking-master\WpfDocking-master\Samples\Docking\CSharp\DockSample\XamlWriter.NamespaceMap.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explorer", "WpfApp2\Explorer_GDB\mgen_simpleExplorer\Explorer.csproj", "{82C2CA3C-5671-417A-98B7-548926EA4092}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +22,6 @@ Global
 		{975A4BC2-25E4-4249-8D0B-E3A1A5DB5C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975A4BC2-25E4-4249-8D0B-E3A1A5DB5C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975A4BC2-25E4-4249-8D0B-E3A1A5DB5C6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82C2CA3C-5671-417A-98B7-548926EA4092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82C2CA3C-5671-417A-98B7-548926EA4092}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82C2CA3C-5671-417A-98B7-548926EA4092}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82C2CA3C-5671-417A-98B7-548926EA4092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
